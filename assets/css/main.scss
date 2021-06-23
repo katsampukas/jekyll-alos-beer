@@ -1,0 +1,144 @@
+---
+---
+
+///////////
+// Imports
+///////////
+
+@import "reset";
+
+
+///////////
+// Fonts
+///////////
+
+@font-face {
+  font-family: "Cera";
+  src: url("../../assets/fonts/Cera/TypeMates - Cera Pro Light copy.otf");
+}
+
+
+///////////
+// General
+///////////
+
+body {
+  background: #252120;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Cera", sans-serif;
+}
+
+.wrapper {
+  max-width: 410px;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+///////////
+// Header
+///////////
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  transition: background .3s ease-in-out;
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: 80px;
+  height: 33px;
+  background: url(../../assets/images/logo.svg);
+  font-size: 0;
+}
+
+#nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 24px;
+  width: 30px;
+  background-color: #2B2523;
+  mask-image: url(../../assets/images/menu-closed.svg);
+  -webkit-mask-image: url(../../assets/images/menu-closed.svg);
+  transition: background-color .3s ease-in-out;
+}
+
+.trigger {
+  display: none;
+}
+
+// Scrolled
+
+.site-header.scrolled {
+  background: #2B2523;
+
+  .menu-icon {
+    background-color: #E9E8E5;
+  }
+}
+
+
+///////////
+// Main
+///////////
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  min-height: 100vh;
+}
+
+// Section 1
+
+#start {
+  background: #E9E8E5;
+  background-image: url(../../assets/images/bg-s1.png);
+}
+
+// Section 2
+
+#s2 {
+  background: #252120;
+  background-image: url(../../assets/images/bg-s1.png);
+}
+
+
+
+///////////
+// Footer
+///////////
+
+.site-footer {
+  border-top: 1px solid #605755;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .enjoy-responsibly {
+    margin: 0 0 13px;
+    font-size: 13px;
+  }
+
+  .copyrights {
+    font-size: 12px;
+  }
+}
