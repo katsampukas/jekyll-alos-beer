@@ -17,10 +17,18 @@
   src: url("../../assets/fonts/Cera/TypeMates - Cera Pro Light copy.otf");
 }
 
+@font-face {
+  font-family: "Zangezi";
+  src: url("../../assets/fonts/Zangezi/ZangeziSans09-Regular.otf");
+}
+
 
 ///////////
 // General
 ///////////
+
+html {
+}
 
 body {
   background: #252120;
@@ -34,6 +42,10 @@ body {
   margin: auto;
   padding: 30px;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 .cf:after {
@@ -58,7 +70,7 @@ body {
   float: left;
   width: 80px;
   height: 33px;
-  background: url(../../assets/images/logo.svg);
+  background: url("../../assets/images/logo.svg");
   font-size: 0;
 }
 
@@ -73,8 +85,8 @@ body {
   height: 24px;
   width: 30px;
   background-color: #2B2523;
-  mask-image: url(../../assets/images/menu-closed.svg);
-  -webkit-mask-image: url(../../assets/images/menu-closed.svg);
+  mask-image: url("../../assets/images/menu-closed.svg");
+  -webkit-mask-image: url("../../assets/images/menu-closed.svg");
   transition: background-color .3s ease-in-out;
 }
 
@@ -98,27 +110,186 @@ body {
 ///////////
 
 main {
-  min-height: 100vh;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+  // height: 100vh;
 }
 
 section {
   min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+
+  .wrapper {
+    min-height: 100vh;
+  }
 }
 
 // Section 1
 
 #start {
   background: #E9E8E5;
-  background-image: url(../../assets/images/bg-s1.png);
+  background-image: url("../../assets/images/bg-s1.png");
+  text-align: center;
+
+  .wrapper {
+    padding-bottom: 125px;
+  }
+
+  .start-img {
+    display: block;
+    width: 340px;
+    height: 409px;
+    margin: 130px auto 60px;
+    background: url("../../assets/images/alos-start.png") no-repeat;
+  }
+
+  .epimeleia {
+    display: block;
+    width: 106px;
+    height: 106px;
+    margin: 0 auto 60px;
+    background: url("../../assets/images/epimeleia.png") no-repeat;
+  }
+
+  .enarxi {
+    font-family: "Zangezi", sans-serif;
+    text-transform: uppercase;
+    color: #2B2523;
+    font-size: 24px;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 48px;
+      background: currentColor;
+      position: absolute;
+      left: 50px;
+      top: 30px;
+    }
+  }
 }
 
 // Section 2
 
 #s2 {
   background: #252120;
-  background-image: url(../../assets/images/bg-s1.png);
+  background-image: url("../../assets/images/bg-s2.png");
+
+  .text-s2 {
+    font-size: 14px;
+    max-width: 186px;
+    margin: 173px 0 270px;
+    float: right;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 23px;
+      height: 29px;
+      background-image: url("../../assets/images/koukounari-s2.png");
+      position: absolute;
+      left: 0px;
+      top: -45px;
+    }
+  }
+
+  .epimeleia {
+    clear: both;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 60px;
+    background: url("../../assets/images/epimeleia-s2.png") no-repeat;
+  }
+
+  .text-s2-2 {
+    font-size: 15px;
+    max-width: 290px;
+    margin: 0 0 30px;
+  }
+
+  .buy-s2 {
+    float: left;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid #574C49;
+  }
 }
 
+// Section 3
+
+#s3 {
+  background: #252120;
+
+  .ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 120px 0 80px;
+
+    > p {
+      padding: 25px;
+      font-size: 16px;
+      border: 1px solid #574C49;
+      flex-grow: 1;
+    }
+
+    span {
+      display: block;
+      color: #A27B40;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin: 0 0 10px;
+    }
+
+    .vol {
+      border-left: 0;
+      border-right: 0;
+    }
+
+    .ingred {
+      border-top: 0;
+      width: 100%;
+    }
+
+    .more {
+      border-top: 0;
+      flex-grow: 0;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
+  }
+
+  .epimeleia {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 195px;
+    background: url("../../assets/images/epimeleia-s2.png") no-repeat;
+  }
+
+  .text-s3 {
+    font-size: 14px;
+    margin: 0 0 90px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 23px;
+      height: 29px;
+      background-image: url("../../assets/images/koukounari-s2.png");
+      position: absolute;
+      left: 0px;
+      top: -45px;
+    }
+  }
+}
 
 
 ///////////
@@ -127,6 +298,8 @@ section {
 
 .site-footer {
   border-top: 1px solid #605755;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 
   a {
     color: #fff;
