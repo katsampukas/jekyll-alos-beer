@@ -119,6 +119,7 @@ section {
   min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+  border-bottom: 1px solid #464646;
 
   .wrapper {
     min-height: 100vh;
@@ -291,6 +292,164 @@ section {
   }
 }
 
+// Section 4
+
+#s4 {
+  background: #252120;
+
+  .text-s4 {
+    font-size: 14px;
+    max-width: 315px;
+    margin: 600px 0 110px;
+    position: relative;
+
+    // Stahi
+    &:before {
+      content: "";
+      width: 146px;
+      height: 220px;
+      background-image: url("../../assets/images/stahy-s4.png");
+      position: absolute;
+      left: 50%;
+      top: -520px;
+      margin-left: -115px;
+    }
+
+    // Moon
+    &:after {
+      content: "";
+      width: 104px;
+      height: 106px;
+      background-image: url("../../assets/images/moon-s4.png");
+      position: absolute;
+      right: 0;
+      top: -140px;
+      margin-left: -115px;
+    }
+
+    h3 {
+      font-family: "Zangezi", sans-serif;
+      font-size: 34px;
+      margin: 0 0 10px;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  .img1-s4 {
+    margin: 0 auto 120px;
+  }
+
+  .text2-s4 {
+    font-size: 14px;
+    margin: 0 0 90px;
+
+    span {
+      display: block;
+      font-size: 13px;
+      margin: 0 0 10px;
+    }
+
+    h3 {
+      font-family: "Zangezi", sans-serif;
+      font-size: 34px;
+      margin: 0 0 10px;
+    }
+  }
+
+  .img2-s4 {
+    margin: 0 0 50px;
+  }
+
+  .img3-s4 {
+    margin: 0 0 50px;
+  }
+}
+
+// Section 4
+
+#s5 {
+  background: #E9E8E5;
+  background-image: url("../../assets/images/bg-s5.png");
+  color: #252120;
+  text-align: center;
+
+  .img1-s5 {
+    display: block;
+    margin: 150px auto 50px;
+  }
+
+  h3 {
+    font-family: "Zangezi", sans-serif;
+    font-size: 34px;
+    margin: 0 0 10px;
+
+    span {
+      font-size: 20px;
+      display: block;
+      margin: 20px 0 0;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    margin: 20px 0 50px;
+  }
+
+  .buy-s5 {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: #E9E8E5;
+    background: #2B2523;
+    padding: 15px 30px;
+  }
+}
+
+// Section 6
+
+#s6 {
+  background: #252120;
+  min-height: 0;
+
+  .wrapper {
+    min-height: 0;
+  }
+
+  h3 {
+    font-family: "Zangezi", sans-serif;
+    font-size: 34px;
+    margin: 10px 0 30px;
+  }
+
+  p {
+    font-size: 15px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: currentColor;
+      font-size: 24px;
+      margin: 10px 0 0;
+    }
+  }
+
+  .contact-btn {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: #E9E8E5;
+    padding: 15px 30px;
+    border: 1px solid #574C49;
+    display: inline-block;
+    margin: 40px 0 10px;
+  }
+}
 
 ///////////
 // Footer
