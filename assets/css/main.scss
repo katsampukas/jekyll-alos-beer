@@ -127,6 +127,28 @@ section {
   }
 }
 
+// Animated
+
+#animation {
+  min-height: auto;
+
+  .wrapper {
+    min-height: auto;
+    padding: 0;
+  }
+}
+
+#mpoukali-animated {
+  position: absolute;
+  width: 143px;
+  height: 426px;
+  background-image: url("../../assets/images/mpoukali-animated.png");
+  z-index: 1;
+  top: -450px;
+  left: 50%;
+  margin-left: -72px;
+}
+
 // Section 1
 
 #start {
