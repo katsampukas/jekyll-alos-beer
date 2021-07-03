@@ -98,6 +98,7 @@ a {
 
 .site-header.scrolled {
   background: #2B2523;
+  z-index: 1;
 
   .menu-icon {
     background-color: #E9E8E5;
@@ -132,9 +133,11 @@ section {
   background: #E9E8E5;
   background-image: url("../../assets/images/bg-s1.png");
   text-align: center;
+  min-height: auto;
 
   .wrapper {
     padding-bottom: 125px;
+    min-height: auto;
   }
 
   .start-img {
@@ -345,6 +348,18 @@ section {
   .text2-s4 {
     font-size: 14px;
     margin: 0 0 90px;
+    position: relative;
+
+    // background
+    &:before {
+      content: "";
+      width: 287px;
+      height: 193px;
+      position: absolute;
+      top: -40px;
+      left: 30px;
+      background-image: url("../../assets/images/epimeleia-s4-bg.png");
+    }
 
     span {
       display: block;
@@ -472,5 +487,60 @@ section {
 
   .copyrights {
     font-size: 12px;
+  }
+}
+
+
+///////////////////////
+// Ypefthini Katanalosi
+///////////////////////
+
+#ypefthini-katanalosi {
+  background: #2B2523;
+  padding: 110px 0 35px;
+  min-height: auto;
+
+  .wrapper {
+    min-height: auto;
+  }
+
+  h1 {
+    font-family: "Zangezi", sans-serif;
+    font-size: 35px;
+    margin: 10px 0 40px;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 20px 33px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 23px;
+      height: 29px;
+      background-image: url("../../assets/images/koukounari-s2.png");
+      position: absolute;
+      left: -36px;
+      top: -9px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: inside;
+    font-size: 14px;
+    line-height: 1.4;
+
+    li {
+      margin: 0 0 15px;
+    }
   }
 }
