@@ -24,54 +24,57 @@ window.addEventListener('scroll', onScroll)
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 1st step
-gsap.to("#mpoukali-animated", {
-  x: 0,
-  y: 1648,
-  rotation: 327,
-  scrollTrigger: {
-    trigger: "#start",
-    start: "80px",
-    end: "+=700px",
-    scrub: true,
-    id: "scrub"
-  }
-});
+if (window,innerWidth < 400) {
 
-// 2nd step
-gsap.fromTo("#mpoukali-animated", {
-  x: 0,
-  y: 1648,
-  rotation: 327,
-},
-{
-  x: 101,
-  y: 2718,
-  rotation: 360,
-  scrollTrigger: {
-    trigger: "#s3",
-    start: "top center",
-    end: "top 100px",
-    scrub: true,
-    id: "scrub"
-  }
-});
+  // 1st step
+  gsap.to("#mpoukali-animated", {
+    x: 0,
+    y: 1648,
+    rotation: 327,
+    scrollTrigger: {
+      trigger: "#start",
+      start: "80px",
+      end: "+=700px",
+      scrub: true,
+      id: "scrub"
+    }
+  });
 
-// 3rd step
-gsap.fromTo("#mpoukali-animated", {
-  x: 101,
-  y: 2718,
-  rotation: 360,
-},
-{
-  x: 0,
-  y: 3631,
-  rotation: 374,
-  scrollTrigger: {
-    trigger: "#s4",
-    start: "top center",
-    end: "top 100px",
-    scrub: true,
-    id: "scrub"
-  }
-});
+  // 2nd step
+  gsap.fromTo("#mpoukali-animated", {
+    x: 0,
+    y: 1648,
+    rotation: 327,
+  },
+  {
+    x: 87,
+    y: 2541,
+    rotation: 360,
+    scrollTrigger: {
+      trigger: "#s3",
+      start: "top center",
+      end: "top 100px",
+      scrub: true,
+      id: "scrub"
+    }
+  });
+
+  // 3rd step
+  gsap.fromTo("#mpoukali-animated", {
+    x: 87,
+    y: 2541,
+    rotation: 360,
+  },
+  {
+    x: 0,
+    y: 3320,
+    rotation: 386,
+    scrollTrigger: {
+      trigger: "#s4",
+      start: "top center",
+      end: "top 100px",
+      scrub: true,
+      id: "scrub"
+    }
+  });
+}
