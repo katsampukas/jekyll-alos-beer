@@ -37,6 +37,11 @@ body {
   font-family: "Cera", sans-serif;
 }
 
+main {
+  overflow: hidden;
+  max-width: 100%;
+}
+
 .wrapper {
   max-width: 410px;
   margin: auto;
