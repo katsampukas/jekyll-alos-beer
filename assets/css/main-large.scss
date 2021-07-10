@@ -1,0 +1,114 @@
+---
+---
+
+///////////
+// General
+///////////
+
+html {
+}
+
+body {
+}
+
+.wrapper {
+  max-width: 1330px;
+}
+
+///////////
+// Header
+///////////
+
+
+// Menu
+
+.menu-icon { // hide mobile trigger
+  display: none;
+}
+
+.trigger { // container
+  display: block;
+  background: none;
+  width: auto;
+  height: auto;
+  top: 50%;
+  padding: 0;
+  right: 20px;
+  left: auto;
+  text-align: right;
+  transform: translateY(-50%);
+
+  @at-root #nav-trigger:checked ~ & {
+    display: block;
+  }
+}
+
+.menu-links { //links
+  margin: 0;
+
+  h2 {
+    font-family: "Cera", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #434343;
+    font-size: 0;
+    line-height: 12px;
+
+    a:after { // line right
+      content: "";
+      display: inline-block;
+      width: 62px;
+      height: 1px;
+      background: currentColor;
+      margin: 0 0 0 15px;
+      vertical-align: middle;
+      transition: width .2s ease;
+    }
+
+    @at-root body:not(.start, .s5) & {
+      color: #fff;
+    }
+  }
+}
+
+// Animate accordingly
+
+$sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
+
+@each $section, $number in $sections {
+
+  .#{$section} {
+
+    .menu-links {
+
+      h2:nth-child(#{$number}) {
+        font-size: 12px;
+
+        a:after {
+          width: 92px;
+        }
+      }
+    }
+  }
+}
+
+.social,
+.menu-footer { // hide social, menu-footer
+  display: none;
+}
+
+
+///////////
+// Main
+///////////
+
+
+///////////
+// Footer
+///////////
+
+
+///////////////////////
+// Ypefthini Katanalosi
+///////////////////////

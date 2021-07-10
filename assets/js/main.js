@@ -1,4 +1,6 @@
+//////////
 // Navbar
+//////////
 
 const navbar = document.getElementsByTagName('header');
 
@@ -19,7 +21,9 @@ const onScroll = () => {
 window.addEventListener('scroll', onScroll);
 
 
+//////////
 // Menu
+/////////
 
 const menu = document.getElementById('nav-trigger');
 const body = document.body;
@@ -47,12 +51,25 @@ Array.from(menu_items).forEach(function(element) {
 });
 
 
-///////////////
-// Scroll Magic
+/////////////////
+// Start button
+/////////////////
+
+var enarxi = document.getElementById("enarxi");
+
+enarxi.addEventListener('click', function(e){
+  e.preventDefault();
+  document.getElementById("s2").scrollIntoView({behavior: 'smooth' })
+});
+
+
+///////////////////////
+// Scroll Magic Mobile
+///////////////////////
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window,innerWidth < 600) {
+if (window,innerWidth < 800) {
 
   // 1st step
   gsap.to("#mpoukali-animated", {
@@ -106,3 +123,26 @@ if (window,innerWidth < 600) {
     }
   });
 }
+
+
+////////////////
+// Menu Desktop
+////////////////
+
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    var bodyclass = entry.target.id;
+    if(entry.isIntersecting){
+      console.log(entry.target.id);
+      body.classList.add(bodyclass);
+    }
+    else {
+      body.classList.remove(bodyclass);
+    }
+  });
+}, {rootMargin: "-50%"});
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section)
+});
+
