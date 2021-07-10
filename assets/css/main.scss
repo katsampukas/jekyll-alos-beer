@@ -35,6 +35,10 @@ body {
   color: #fff;
   font-size: 14px;
   font-family: "Cera", sans-serif;
+
+  &.menu-active {
+    overflow: hidden; // freeze scroll
+  }
 }
 
 main {
@@ -68,6 +72,10 @@ a {
   position: fixed;
   width: 100%;
   transition: background .3s ease-in-out;
+
+  @at-root .menu-active & {
+    z-index: 1; // overshadow everything
+  }
 }
 
 .logo {
@@ -81,7 +89,18 @@ a {
 
 #nav-trigger {
   display: none;
+
+  // checked
+  &:checked {
+
+    ~ .trigger {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
+
+// Menu
 
 .menu-icon {
   cursor: pointer;
@@ -93,10 +112,89 @@ a {
   mask-image: url("../../assets/images/menu-closed.svg");
   -webkit-mask-image: url("../../assets/images/menu-closed.svg");
   transition: background-color .3s ease-in-out;
+
+  // If is checked
+  @at-root #nav-trigger:checked ~ label {
+    z-index: 3; // bring front
+    position: relative;
+
+    .menu-icon {
+      height: 23px;
+      width: 23px;
+      background: #fff;
+      mask-image: url("../../assets/images/menu-opened.svg");
+      -webkit-mask-image: url("../../assets/images/menu-opened.svg");
+    }
+  }
 }
 
 .trigger {
   display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
+  background: #2B2523;
+  background-image: url("../../assets/images/menu-bg.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.menu-links {
+  margin: 40px 0 0;
+
+  h2 {
+    font-family: "Zangezi", sans-serif;
+    color: #fff;
+    font-size: 35px;
+    margin: 0 0 10px;
+  }
+
+  a {
+    color: currentColor;
+  }
+}
+
+.social {
+  margin: 20px 0;
+
+  .instagram {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 15px 0 0;
+    background: url("../../assets/images/instagram.png") no-repeat;
+  }
+
+  .twitter {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 15px 0 0;
+    background: url("../../assets/images/twitter.png") no-repeat;
+  }
+}
+
+.menu-footer {
+  margin-top: auto; // align bottom
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .enjoy-responsibly {
+    margin: 0 0 13px;
+    font-size: 13px;
+  }
+
+  .copyrights {
+    font-size: 12px;
+  }
 }
 
 // Scrolled
@@ -104,6 +202,10 @@ a {
 .site-header.scrolled {
   background: #2B2523;
   z-index: 1;
+
+  @at-root .menu-active & {
+    z-index: 2;
+  }
 
   .menu-icon {
     background-color: #E9E8E5;
@@ -161,9 +263,10 @@ section {
   background-image: url("../../assets/images/bg-s1.png");
   text-align: center;
   min-height: auto;
+  height: 840px;
 
   .wrapper {
-    padding-bottom: 125px;
+    padding-bottom: 90px;
     min-height: auto;
   }
 
@@ -171,7 +274,7 @@ section {
     display: block;
     width: 340px;
     height: 409px;
-    margin: 130px auto 60px;
+    margin: 80px auto 50px;
     background: url("../../assets/images/alos-start.png") no-repeat;
   }
 
@@ -179,7 +282,7 @@ section {
     display: block;
     width: 106px;
     height: 106px;
-    margin: 0 auto 60px;
+    margin: 0 auto 50px;
     background: url("../../assets/images/epimeleia.png") no-repeat;
   }
 
@@ -207,11 +310,17 @@ section {
 #s2 {
   background: #252120;
   background-image: url("../../assets/images/bg-s2.png");
+  min-height: auto;
+  height: 805px;
+
+  .wrapper {
+    min-height: auto;
+  }
 
   .text-s2 {
     font-size: 14px;
     max-width: 186px;
-    margin: 173px 0 270px;
+    margin: 90px 0 270px;
     float: right;
     position: relative;
 
@@ -250,6 +359,7 @@ section {
     color: #fff;
     padding: 15px 30px;
     border: 1px solid #574C49;
+    margin: 0 0 50px;
   }
 }
 
@@ -257,11 +367,17 @@ section {
 
 #s3 {
   background: #252120;
+  min-height: auto;
+  height: 916px;
+
+  .wrapper {
+    min-height: auto;
+  }
 
   .ingredients {
     display: flex;
     flex-wrap: wrap;
-    margin: 120px 0 80px;
+    margin: 90px 0 80px;
 
     > p {
       padding: 25px;
@@ -326,6 +442,12 @@ section {
 
 #s4 {
   background: #252120;
+  min-height: auto;
+  height: 1997px;
+
+  .wrapper {
+    min-height: auto;
+  }
 
   .text-s4 {
     font-size: 14px;
