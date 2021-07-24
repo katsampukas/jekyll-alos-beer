@@ -69,45 +69,43 @@ enarxi.addEventListener('click', function(e){
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window,innerWidth < 800) {
+if (window.innerWidth < 800) {
 
   // 1st step
   gsap.to("#mpoukali-animated", {
     x: 0,
-    y: 1432,
+    y: 1443,
     rotation: 324,
     scrollTrigger: {
       trigger: "#start",
       start: "80px",
       end: "+=700px",
-      scrub: true,
-      id: "scrub"
+      scrub: 2
     }
   });
 
   // 2nd step
   gsap.fromTo("#mpoukali-animated", {
     x: 0,
-    y: 1432,
+    y: 1443,
     rotation: 324,
   },
   {
     x: 87,
-    y: 2354,
+    y: 2377,
     rotation: 360,
     scrollTrigger: {
       trigger: "#s3",
       start: "top center",
       end: "top 100px",
-      scrub: true,
-      id: "scrub"
+      scrub: 1
     }
   });
 
   // 3rd step
   gsap.fromTo("#mpoukali-animated", {
     x: 87,
-    y: 2354,
+    y: 2377,
     rotation: 360,
   },
   {
@@ -118,8 +116,7 @@ if (window,innerWidth < 800) {
       trigger: "#s4",
       start: "top center",
       end: "top 100px",
-      scrub: true,
-      id: "scrub"
+      scrub: 1
     }
   });
 }
@@ -146,3 +143,14 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
 });
 
+
+
+// Test
+gsap.from(".text-s2-2", {
+  x: -100,
+  scrollTrigger: {
+    trigger: ".text-s2-2",
+    toggleActions: "restart none none none"
+  },
+  duration: 2
+});
