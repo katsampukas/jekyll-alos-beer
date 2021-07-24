@@ -9,6 +9,9 @@
     </h1>
 
     {%- if titles_size > 0 -%}
+
+    {% if page.url != "/ypefthini-katanalosi.html" %}
+
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -25,8 +28,8 @@
             <h2><a href="#s6" class="menu-anchor">Επικοινωνία</a></h2>
           </div>
           <div class="social">
-            <a href="" class="instagram"></a>
-            <a href="" class="twitter"></a>
+            <a href="http://instagram.com/chiosbeer" class="instagram" target="_blank" rel="noopener"></a>
+            <a href="http://twitter.com/chiosbeer" class="twitter" target="_blank" rel="noopener"></a>
           </div>
           <div class="menu-footer">
             <p class="enjoy-responsibly">
@@ -48,6 +51,7 @@
           </div>
         </div>
       </nav>
+    {%- endif -%}
     {%- endif -%}
   </div>
 </header>
