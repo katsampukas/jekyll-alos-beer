@@ -35,6 +35,7 @@ body {
   color: #fff;
   font-size: 14px;
   font-family: "Cera", sans-serif;
+  line-height: 1.4;
 
   &.menu-active {
     overflow: hidden; // freeze scroll
@@ -152,6 +153,7 @@ a {
     color: #fff;
     font-size: 35px;
     margin: 0 0 10px;
+    transition: color .4s ease;
   }
 
   a {
@@ -228,6 +230,7 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
   border-bottom: 1px solid #464646;
+  background-repeat: no-repeat;
 
   .wrapper {
     min-height: 100vh;
@@ -308,8 +311,9 @@ section {
 // Section 2
 
 #s2 {
-  background: #252120;
+  background-color: #252120;
   background-image: url("../../assets/images/bg-s2.png");
+  background-position: 50%;
   min-height: auto;
   height: 805px;
 
@@ -410,6 +414,10 @@ section {
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.5em;
+
+      > a {
+        color: currentColor
+      }
     }
   }
 
@@ -426,7 +434,26 @@ section {
     margin: 0 0 90px;
     position: relative;
 
+    // move text to the foreground
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    // background
     &:before {
+      content: "";
+      position: absolute;
+      top: -140px;
+      left: -1000px;
+      right: -1000px;
+      height: 725px;
+      background: #2B2523;
+      z-index: 0;
+    }
+
+    // koukounari
+    &:after {
       content: "";
       width: 23px;
       height: 29px;
@@ -443,7 +470,7 @@ section {
 #s4 {
   background: #252120;
   min-height: auto;
-  height: 1997px;
+  height: 2070px;
 
   .wrapper {
     min-height: auto;
