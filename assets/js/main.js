@@ -69,7 +69,7 @@ enarxi.addEventListener('click', function(e){
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window.innerWidth < 800) {
+if (window.innerWidth < 1150) {
 
   // 1st step
   gsap.to("#mpoukali-animated", {
@@ -143,6 +143,63 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
 });
 
+
+///////////////////////
+// Scroll Magic Desktop
+///////////////////////
+
+gsap.registerPlugin(ScrollTrigger);
+
+if (window.innerWidth >= 1150) {
+
+  // 1st step
+  gsap.to("#mpoukali-animated", {
+    x: 0,
+    y: 2000,
+    rotation: 340,
+    scrollTrigger: {
+      trigger: "#start",
+      start: "80px",
+      end: "+500px",
+      scrub: 2
+    }
+  });
+
+  // 2nd step
+  gsap.fromTo("#mpoukali-animated", {
+    x: 0,
+    y: 2000,
+    rotation: 340,
+  },
+  {
+    x: -40,
+    y: 2950,
+    rotation: 360,
+    scrollTrigger: {
+      trigger: "#s3",
+      start: "top 70%",
+      end: "top 650px",
+      scrub: 1
+    }
+  });
+
+  // 3rd step
+  gsap.fromTo("#mpoukali-animated", {
+    x: -40,
+    y: 2950
+  },
+  {
+    x: -260,
+    y: 4015,
+    rotation: 380,
+    scrollTrigger: {
+      trigger: "#s4",
+      start: "top 80%",
+      end: "top 500px",
+      scrub: 1
+    }
+  });
+}
 
 
 // Test
