@@ -113,6 +113,17 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
 // Main
 ///////////
 
+// Animated
+
+#mpoukali-animated {
+  width: 204px;
+  height: 607px;
+  background-image: url("../../assets/images/mpoukali-s5-large.png");
+  top: -850px;
+  z-index: 4;
+}
+
+
 // Section 1
 
 #start {
@@ -359,6 +370,21 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
     z-index: 1;
     position: relative;
     padding: 60px;
+  }
+
+  // Smaller screens fix positioning
+  @media screen and (max-width: 1319px) {
+
+    .img2-s4 {
+      position: absolute;
+      top: 1130px;
+      right: 670px;
+      left: auto;
+    }
+
+    .img3-s4 {
+      padding: 100px 70px 70px;
+    }
   }
 }
 
