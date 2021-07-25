@@ -19,6 +19,12 @@ body {
 // Header
 ///////////
 
+.logo {
+  width: 94px;
+  height: 38px;
+  background-size: cover;
+}
+
 
 // Menu
 
@@ -87,6 +93,7 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
 
         a:after {
           width: 92px;
+          color: #A27B40;
         }
       }
     }
@@ -102,6 +109,133 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
 ///////////
 // Main
 ///////////
+
+// Section 1
+
+#start {
+  height: 965px;
+  background-image: url("../../assets/images/bg-s1-large.png");
+  background-size: cover;
+
+  .start-img {
+    width: 444px;
+    height: 529px;
+    margin: 130px auto 80px;
+    background: url("../../assets/images/alos-start-large.png") no-repeat;
+  }
+
+  // Hide epimeleia as it's in the main image above
+  .epimeleia {
+    display: none;
+  }
+
+  .enarxi {
+    font-size: 25px;
+
+    &:after {
+      height: 67px;
+      top: 40px;
+    }
+  }
+}
+
+// Section 2
+
+#s2 {
+  background-image: url("../../assets/images/bg-s2-large.png");
+  height: 965px;
+
+  .wrapper {
+    padding: 30px 150px 30px;
+    position: relative;
+  }
+
+  .text-s2 {
+    font-size: 15px;
+    max-width: 220px;
+    margin: 400px 80px 100px 0;
+  }
+
+  .epimeleia {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 277px;
+    margin: 0 0 0 230px;
+    background: url("../../assets/images/epimeleia-s2-large.png") no-repeat;
+  }
+
+  .text-s2-2 {
+    clear: both;
+    max-width: 220px;
+    margin: 0 0 30px;
+  }
+
+  .buy-s2 {
+    padding: 15px 50px;
+  }
+}
+
+// Section 3
+
+#s3 {
+  height: 1050px;
+
+  .wrapper {
+    padding: 30px 150px 30px;
+    position: relative;
+  }
+
+  .ingredients {
+    position: relative;
+    max-width: 480px;
+    margin: 210px 0 230px;
+
+    > p {
+      padding: 30px;
+      font-size: 20px;
+    }
+
+    .more {
+      background: #2B2523;
+    }
+
+    // Alos monogram to the right
+    &:after {
+      content: "";
+      position: absolute;
+      width: 838px;
+      height: 328px;
+      left: 565px;
+      background: url("../../assets/images/bg-s3-large.png") no-repeat;
+    }
+  }
+
+  // reposition next to the text s3
+  .epimeleia {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    margin: 0 0 195px;
+    z-index: 1;
+    left: 930px;
+    background: url("../../assets/images/epimeleia-s2-large.png") no-repeat;
+  }
+
+  .text-s3 {
+    font-size: 15px;
+    margin: 0 0 150px;
+    max-width: 315px;
+
+    // color background
+    &:before {
+      top: -100px;
+      left: -1000px;
+      right: -653px;
+      height: 725px;
+    }
+  }
+}
 
 
 ///////////
