@@ -249,6 +249,8 @@ section {
 }
 
 #mpoukali-animated {
+  transform: translateZ(0); // at cpu
+  will-change: transform;
   position: absolute;
   width: 143px;
   height: 426px;
