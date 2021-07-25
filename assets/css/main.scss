@@ -728,3 +728,35 @@ section {
     }
   }
 }
+
+
+////////////
+// Age Wall
+////////////
+
+#agewall {
+  display: none;
+}
+
+body.agewall {
+  overflow: hidden;
+
+  & > *:not(#agewall) {
+    display: none !important;
+  }
+
+  #agewall {
+    display: block;
+
+    .infant-alert {
+      display: none;
+    }
+  }
+
+  #agewall.alert {
+
+    .infant-alert {
+      display: block;
+    }
+  }
+}
