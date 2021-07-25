@@ -510,11 +510,17 @@ section {
       font-family: "Zangezi", sans-serif;
       font-size: 34px;
       margin: 0 0 10px;
+      line-height: 1.1;
     }
   }
 
   img {
     display: block;
+
+    // Hide large images
+    &.large {
+      display: none;
+    }
   }
 
   .img1-s4 {
@@ -527,7 +533,7 @@ section {
     position: relative;
 
     // background
-    &:before {
+    &:after {
       content: "";
       width: 287px;
       height: 193px;
@@ -559,7 +565,7 @@ section {
   }
 }
 
-// Section 4
+// Section 5
 
 #s5 {
   background: #E9E8E5;

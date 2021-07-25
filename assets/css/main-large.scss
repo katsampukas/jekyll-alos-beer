@@ -25,6 +25,9 @@ body {
   background-size: cover;
 }
 
+.site-header.scrolled {
+  z-index: 3;
+}
 
 // Menu
 
@@ -216,7 +219,7 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
     position: absolute;
     width: 130px;
     height: 130px;
-    margin: 0 0 195px;
+    margin: -40px 0 195px;
     z-index: 1;
     left: 930px;
     background: url("../../assets/images/epimeleia-s2-large.png") no-repeat;
@@ -232,8 +235,214 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
       top: -100px;
       left: -1000px;
       right: -653px;
-      height: 725px;
+      height: 950px;
     }
+  }
+}
+
+// Section 4
+
+#s4 {
+  height: 2080px;
+
+  .wrapper {
+    padding: 30px 150px 30px;
+    position: relative;
+
+    // Alos monogram to the bottom right
+    &:after {
+      content: "";
+      position: absolute;
+      width: 838px;
+      height: 328px;
+      left: 790px;
+      bottom: 35px;
+      background: url("../../assets/images/bg-s3-large.png") no-repeat;
+    }
+  }
+
+  .text-s4 {
+    font-size: 15px;
+    margin: 330px 0 260px 500px;
+
+    // Stahi large
+    &:before {
+      width: 164px;
+      height: 280px;
+      background-image: url("../../assets/images/stahy-s4-large.png");
+      left: -290px;
+      top: -205px;
+    }
+
+    // Moon large
+    &:after {
+      width: 167px;
+      height: 169px;
+      background-image: url("../../assets/images/moon-s4-large.png");
+      right: -75px;
+      top: -315px;
+    }
+
+    h3 {
+      font-size: 40px;
+      margin: 0 0 10px -30px;
+
+      &:first-letter {
+        margin-left: -30px;
+      }
+    }
+  }
+
+  // Show large images
+  img {
+    display: none;
+
+    &.large {
+      display: block;
+    }
+  }
+
+  .img1-s4 {
+    float: right;
+    margin: 0 70px 100px 0;
+  }
+
+  .text2-s4 {
+    clear: both;
+    float: right;
+    width: 360px;
+    font-size: 15px;
+    margin: 100px 70px 0 0;
+    padding: 105px 0 30px 90px;
+
+    // background Ioannidis signature
+    &:after {
+      width: 435px;
+      height: 287px;
+      top: 0;
+      left: 0;
+      background-image: url("../../assets/images/epimeleia-s4-bg-large.png");
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+
+    h3,
+    span,
+    p {
+      z-index: 2;
+      position: relative;
+    }
+
+    // background color below text
+    &:before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      left: -1000px;
+      right: -70px;
+      height: 500px;
+      background: #2B2523;
+      z-index: 0;
+    }
+  }
+
+  .img2-s4 {
+    z-index: 1;
+    position: relative;
+    top: 305px;
+    left: -25px;
+  }
+
+  .img3-s4 {
+    z-index: 1;
+    position: relative;
+    padding: 60px;
+  }
+}
+
+// Section 5
+
+#s5 {
+  background-image: url("../../assets/images/bg-s5-large.png");
+  background-size: cover;
+
+  .wrapper {
+    max-width: 900px;
+    text-align: right;
+    padding-right: 500px;
+  }
+
+  // Hide image, bottle will render as pseudo below
+  .img1-s5 {
+    display: none;
+  }
+
+  h3 {
+    font-size: 40px;
+    margin: 330px 0 20px;
+    line-height: 1.1;
+    float: right;
+    max-width: 300px;
+    position: relative;
+
+    span {
+      margin: 10px 0 0;
+    }
+
+    // Beer to the right
+    &:after {
+      content: "";
+      position: absolute;
+      width: 204px;
+      height: 607px;
+      right: -300px;
+      bottom: -350px;
+      background: url("../../assets/images/mpoukali-s5-large.png") no-repeat;
+    }
+  }
+
+  p {
+    clear: both;
+  }
+
+  .buy-s5 {
+    padding: 15px 50px;
+  }
+}
+
+// Section 6
+
+#s6 {
+
+  .wrapper {
+    min-height: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 30px;
+  }
+
+  h3 {
+    font-size: 40px;
+    max-width: 300px;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  p {
+    font-size: 15px;
+    align-self: center;
+
+    a {
+      font-size: 25px;
+    }
+  }
+
+  .contact-btn {
+    padding: 15px 50px;
+    margin: 0;
+    align-self: center;
   }
 }
 
@@ -241,6 +450,14 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
 ///////////
 // Footer
 ///////////
+
+.site-footer {
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
 ///////////////////////
