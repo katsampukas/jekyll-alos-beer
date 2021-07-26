@@ -393,6 +393,7 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
 #s5 {
   background-image: url("../../assets/images/bg-s5-large.png");
   background-size: cover;
+  min-height: 1010px;
 
   .wrapper {
     max-width: 900px;
