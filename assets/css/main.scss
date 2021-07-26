@@ -736,6 +736,63 @@ section {
 
 #agewall {
   display: none;
+  background-image: url("../../assets/images/agewall-bg.png");
+  background-position: bottom right;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    width: 115px;
+    height: 47px;
+    font-size: 0;
+    margin: 0 0 35px;
+    background-image: url("../../assets/images/alos-agewall-logo.png");
+  }
+
+  p {
+    font-family: "Zangezi", sans-serif;
+    font-size: 34px;
+    margin: 0 0 15px;
+    line-height: 1.1;
+
+    span {
+      display: block;
+      font-size: 15px;
+      margin: 15px 0 35px;
+      font-family: "Cera", sans-serif;
+    }
+  }
+
+  button {
+    font-size: 10px;
+    padding: 15px 35px;
+    background: none;
+    border: 1px solid #574C49;
+    color: #fff;
+    margin: 0 25px 0 0;
+    font-family: "Cera", sans-serif;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  #yes {
+    background: #A27B40;
+    border: 0;
+  }
+
+  .infant-alert {
+    margin: 35px 0 0;
+    font-family: "Zangezi", sans-serif;
+    font-size: 34px;
+    max-width: 625px;
+  }
 }
 
 body.agewall {
@@ -749,14 +806,20 @@ body.agewall {
     display: block;
 
     .infant-alert {
-      display: none;
+      opacity: 0;
+      transition: opacity 2.5s ease;
     }
   }
 
   #agewall.alert {
 
+    p,
+    button {
+      opacity: .2;
+    }
+
     .infant-alert {
-      display: block;
+      opacity: 1;
     }
   }
 }
