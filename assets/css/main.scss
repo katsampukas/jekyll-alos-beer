@@ -237,7 +237,7 @@ section {
   }
 }
 
-// Animated
+// Animated Bottle
 
 #animation {
   min-height: auto;
@@ -440,6 +440,7 @@ section {
     span {
       position: relative;
       z-index: 1;
+      display: block;
     }
 
     // background
@@ -574,6 +575,7 @@ section {
   background-image: url("../../assets/images/bg-s5.png");
   color: #252120;
   text-align: center;
+  min-height: 1050px;
 
   .img1-s5 {
     display: block;
