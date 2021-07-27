@@ -139,9 +139,57 @@ let observer = new IntersectionObserver((entries, observer) => {
   });
 }, {rootMargin: "-50%"});
 
-document.querySelectorAll('section').forEach(section => {
+document.querySelectorAll('#start, #s5').forEach(section => {
   observer.observe(section)
 });
+
+
+let observer3 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    var bodyclass = entry.target.id;
+    if(entry.isIntersecting){
+      body.classList.add(bodyclass);
+    }
+    else {
+      body.classList.remove(bodyclass);
+    }
+  });
+}, {rootMargin: "920px 0% -50% 0%"});
+
+const section2 = document.getElementById("s2")
+observer3.observe(section2)
+
+
+let observer4 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    var bodyclass = entry.target.id;
+    if(entry.isIntersecting){
+      body.classList.add(bodyclass);
+    }
+    else {
+      body.classList.remove(bodyclass);
+    }
+  });
+}, {rootMargin: "450px 0% -50% 0%"});
+
+const section3 = document.getElementById("nav3")
+observer4.observe(section3)
+
+
+let observer5 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    var bodyclass = entry.target.id;
+    if(entry.isIntersecting){
+      body.classList.add(bodyclass);
+    }
+    else {
+      body.classList.remove(bodyclass);
+    }
+  });
+}, {rootMargin: "160px 0% -50% 0%"});
+
+const section4 = document.getElementById("nav4")
+observer5.observe(section4)
 
 
 ///////////////////////
