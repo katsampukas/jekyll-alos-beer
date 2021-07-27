@@ -202,12 +202,21 @@ if (window.innerWidth >= 1150) {
 }
 
 
-// Test
-gsap.from(".text-s2-2", {
-  x: -100,
-  scrollTrigger: {
-    trigger: ".text-s2-2",
-    toggleActions: "restart none none none"
-  },
-  duration: 2
+//////////////////////////
+// Add Fade Texts Effects
+//////////////////////////
+
+let observer2 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("fadeIn")
+    }
+    else {
+      entry.target.classList.remove("fadeIn")
+    }
+  });
+}, {rootMargin: "-20%"});
+
+document.querySelectorAll(".fade").forEach(section => {
+  observer2.observe(section)
 });
