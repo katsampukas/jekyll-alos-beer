@@ -113,7 +113,7 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
 // Main
 ///////////
 
-// Animated
+// Animated Bottle
 
 #mpoukali-animated {
   width: 204px;
@@ -142,6 +142,21 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
     transform: translateX(0px);
   }
 }
+
+// Animated circle Ioannidis
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.rotate {
+  animation: rotate 40s linear infinite;
+}
+
+//////////////
+// Sections
 
 // Section 1
 
