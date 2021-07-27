@@ -83,7 +83,7 @@ body {
 
 // Animate accordingly
 
-$sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
+$sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
 
 @each $section, $number in $sections {
 
