@@ -123,6 +123,25 @@ $sections: ("start": "1", "s2": "2", "s3": "3", "s4": "4", "s5": "5");
   z-index: 4;
 }
 
+// Animated Texts
+
+.fade {
+  opacity: 0;
+  transition: transform 1.5s, opacity 1.5s;
+
+  &.left {
+    transform: translateX(-200px);
+  }
+
+  &.right {
+    transform: translateX(200px);
+  }
+
+  &.fadeIn {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 
 // Section 1
 
