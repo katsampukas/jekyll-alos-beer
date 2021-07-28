@@ -144,6 +144,7 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
 }
 
 // Animated circle Ioannidis
+// this is used at :after pseudo of .epumeleia below
 
 @keyframes rotate {
   to {
@@ -151,9 +152,6 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
   }
 }
 
-.rotate {
-  animation: rotate 40s linear infinite;
-}
 
 //////////////
 // Sections
@@ -211,6 +209,15 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
     top: 277px;
     margin: 0 0 0 230px;
     background: url("../../assets/images/epimeleia-s2-large.png") no-repeat;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      background: url("../../assets/images/epimeleia-s2-large-rotate.png") no-repeat;
+      animation: rotate 40s linear infinite;
+    }
   }
 
   .text-s2-2 {
@@ -268,6 +275,15 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
     z-index: 1;
     left: 930px;
     background: url("../../assets/images/epimeleia-s2-large.png") no-repeat;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      background: url("../../assets/images/epimeleia-s2-large-rotate.png") no-repeat;
+      animation: rotate 40s linear infinite;
+    }
   }
 
   .text-s3 {
