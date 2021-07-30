@@ -222,7 +222,7 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
 
   .text-s2-2 {
     clear: both;
-    max-width: 220px;
+    max-width: 250px;
     margin: 0 0 30px;
   }
 
@@ -540,3 +540,16 @@ $sections: ("start": "1", "s2": "2", "nav3": "3", "nav4": "4", "s5": "5");
 ///////////////////////
 // Ypefthini Katanalosi
 ///////////////////////
+
+
+////////////
+// Age Wall
+////////////
+
+#agewall {
+
+  .wrapper {
+    max-width: 400px;
+    margin-left: 20%;
+  }
+}
