@@ -80,7 +80,8 @@ if (window.innerWidth < 1150) {
       trigger: "#start",
       start: "80px",
       end: "+=700px",
-      scrub: 2
+      scrub: 2,
+      once: true
     }
   });
 
@@ -209,9 +210,10 @@ if (window.innerWidth >= 1150) {
       trigger: "#start",
       start: "80px",
       end: "+500px",
-      scrub: 2
     }
   });
+      scrub: 2,
+      once: true
 
   // 2nd step
   gsap.fromTo("#mpoukali-animated", {
